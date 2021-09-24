@@ -23,7 +23,8 @@ def get_weekday(dt):
 def get_hours(dt):
     return dt.hour
 
-@st.cache
+@st.cache(allow_output_mutation=True)
+# To solve cache warning
 def benchmark(fn):
     def _timing(*a, **kw):
         st = time.perf_counter()
@@ -40,12 +41,14 @@ def your_test():
     time.sleep(1)
     print("OUT")
 
+
 your_test()   
 
-@st.cache
+@st.cache(allow_output_mutation=True)
+# To solve cache warning
 def data_hours(data):
     data["hours"] = data["Date/Time"].map(get_hours)
-    def benchmark(fn):
+    def benchmarkbis(fn):
         def _timing(*a, **kw):
             st = time.perf_counter()
             r = fn(*a, **kw)
@@ -55,7 +58,7 @@ def data_hours(data):
         
         return _timing
 
-    @benchmark
+    @benchmarkbis
     def your_test():
         print("IN")
         time.sleep(1)
@@ -122,15 +125,11 @@ for i in range(100):
     latest_iteration.text(f'Iteration {i+1}')
 bar.progress(i + 1)
 time.sleep(0.1)
+
+components.iframe("https://docs.streamlit.io/en/latest")
+components.iframe("https://www.efrei.fr/?gclid=CjwKCAjwhaaKBhBcEiwA8acsHESfvOBDYrZ-7ZgvmAuCgP4xCmNNxqPW85hpLz8W2LE4HVfpZgYV9xoCWV8QAvD_BwE")
+
 '...and now we\'re done!'
-
-
-
-
-
-    
-
-
 
 
 
