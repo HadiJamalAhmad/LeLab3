@@ -23,7 +23,7 @@ def get_weekday(dt):
 def get_hours(dt):
     return dt.hour
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 # To solve cache warning
 def benchmark(fn):
     def _timing(*a, **kw):
@@ -44,7 +44,7 @@ def your_test():
 
 your_test()   
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 # To solve cache warning
 def data_hours(data):
     data["hours"] = data["Date/Time"].map(get_hours)
