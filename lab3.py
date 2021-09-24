@@ -131,7 +131,7 @@ components.iframe("https://www.efrei.fr/?gclid=CjwKCAjwhaaKBhBcEiwA8acsHESfvOBDY
 
 '...and now we\'re done!'
 
-
+data.close()
 
 
 
