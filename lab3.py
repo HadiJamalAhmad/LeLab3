@@ -29,7 +29,7 @@ def benchmark(fn):
     def _timing(*a, **kw):
         st = time.perf_counter()
         r = fn(*a, **kw)
-    #   print(f"{fn.__name__} execution: {time.perf_counter() - st} seconds")
+        print(f"{fn.__name__} execution: {time.perf_counter() - st} seconds")
     #    print(f"function benchmark : {fn.__name__} execution: {time.perf_counter() - st} seconds", file=open("tplab3.txt", "a"))
         return r
 
@@ -52,7 +52,7 @@ def data_hours(data):
         def _timing(*a, **kw):
             st = time.perf_counter()
             r = fn(*a, **kw)
-        #  print(f"{fn.__name__} execution: {time.perf_counter() - st} seconds")
+            print(f"{fn.__name__} execution: {time.perf_counter() - st} seconds")
         #   print(f"function data_hours : {fn.__name__} execution: {time.perf_counter() - st} seconds", file=open("tplab3.txt", "a"))
             return r
         
