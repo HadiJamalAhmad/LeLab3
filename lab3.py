@@ -41,7 +41,6 @@ def your_test():
     time.sleep(1)
     print("OUT")
 
-
 your_test()   
 
 @st.cache(allow_output_mutation=True)
