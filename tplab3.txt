@@ -3,3 +3,5 @@ function data_hours : your_test execution: 1.0122980999999527 seconds
 function benchmark : your_test execution: 1.0834704000000102 seconds
 function benchmark : your_test execution: 1.0167948000000138 seconds
 function data_hours : your_test execution: 1.0158538999999962 seconds
+function benchmark : your_test execution: 1.0109489000000167 seconds
+function data_hours : your_test execution: 1.009609299999994 seconds
