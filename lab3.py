@@ -7,7 +7,6 @@ import pandas as pd
 import codecs, threading
 from functools import wraps
 
-
 st.title('lab3')
 
 
@@ -62,8 +61,7 @@ def data_hours(data):
         time.sleep(1)
         print("OUT")
 
-
-        your_test()
+    your_test()
   
         
     return data
@@ -124,11 +122,15 @@ for i in range(100):
     latest_iteration.text(f'Iteration {i+1}')
 bar.progress(i + 1)
 time.sleep(0.1)
-
-components.iframe("https://docs.streamlit.io/en/latest")
-components.iframe("https://www.efrei.fr/?gclid=CjwKCAjwhaaKBhBcEiwA8acsHESfvOBDYrZ-7ZgvmAuCgP4xCmNNxqPW85hpLz8W2LE4HVfpZgYV9xoCWV8QAvD_BwE")
-
 '...and now we\'re done!'
+
+
+
+
+
+    
+
+
 
 
 
